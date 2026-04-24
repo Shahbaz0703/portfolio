@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0f0f0f;
+      color: #e6e6e6;
+      font-family: 'Inter', sans-serif
+    }
+
+    .text-green {
+      color: #00ff9d
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      padding: 20px 18px;
+      border: 1px solid #1f1f1f;
+      background: #111;
+      border-radius: 20px
+    }
+
+    .card-dark {
+      background: transparent;
+      border-radius: 16px;
+      padding: 0
+    }
+
+    .btn-green {
+      background: #00ff9d;
+      color: #000;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500
+    }
+    .btn-green:hover {
+      background: #111;
+      color:#00ff9d;
+      border-color: #00ff9d;
+    }
+
+    .section {
+      margin-bottom: 100px
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 20px
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #8a8a8a;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px
+    }
+
+    p {
+      color: #9a9a9a;
+      font-size: 14px
+    }
+
+    .timeline {
+      border-left: 1px solid #2a2a2a;
+      padding-left: 25px;
+      position: relative
+    }
+
+    .timeline-item {
+      margin-bottom: 40px;
+      position: relative
+    }
+
+    .timeline-item::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #00ff9d;
+      border-radius: 50%;
+      position: absolute;
+      left: -30px;
+      top: 5px
+    }
+
+    .nav-pills .nav-link {
+      background: #1a1a1a;
+      color: #777;
+      border-radius: 20px;
+      margin-right: 10px;
+      font-size: 13px
+    }
+
+    .nav-pills .nav-link.active {
+      background: #00ff9d;
+      color: #000
+    }
+
+    .project-card {
+      background: #151515;
+      border-radius: 16px;
+      padding: 15px;
+      height: 200px
+    }
+
+    .social-icons i {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #1a1a1a;
+      margin: 5px;
+      color: #aaa
+    }
+
+    .right-icons {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+
+    .right-icons i {
+      display: block;
+      margin: 10px 0;
+      background: #1a1a1a;
+      padding: 10px;
+      border-radius: 10px;
+      color: #aaa
+    }
+
+    @media(max-width:768px) {
+      .sidebar {
+        position: relative
+      }
+
+      .right-icons {
+        display: none
+      }
+
+      h1 {
+        font-size: 32px
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .right-icons a.active i {
+      background: #00ff9d;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-lg-3 mb-5">
+        <div class="sidebar text-center">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="small"><img class="img-fluid" src="./img/logo.svg" /></span>
+            <button class="btn btn-sm" style="font-size:12px;color:#8a8a8a">Sr. UI/UX Designer</button>
+          </div>
+
+          <img class="img-fluid" src="./img/my.svg" style="border-radius:14px" class="mb-3" />
+
+          <!-- <h5 class="mb-1" style="font-weight:500">Shahbaz Alam</h5> -->
+        
+
+          <p class="small my-3" style="color:#8a8a8a">alam.shahbaz0703@gmail.com<br>Bangaluru, India</p>
+
+          <div class="d-flex justify-content-center gap-2 mt-5 mb-3">
+            <div class="social-icons"><a href="https://www.behance.net/shahbazalam0703" target="_blank" class="text-decoration-none"><i class="fab fa-behance social"></i></a></div>
+            <div class="social-icons"><a href="https://www.linkedin.com/in/md-shahbaz-alam-28885a259/" target="_blank" class="text-decoration-none"><i class="fab fa-linkedin-in social"></i></a></div>
+            <div class="social-icons"><a href="https://github.com/Shahbaz0703" target="_blank" class="text-decoration-none"><i class="fab fa-github social"></i></a></div>
+            <div class="social-icons"><a href="https://www.instagram.com/shaiz_jigglypuff" target="_blank" class="text-decoration-none"><i class="fab fa-instagram social"></i></a></div>
+          </div>
+
+          <a href="./Resume.pdf" class="btn btn-green w-100" target="_blank"><i class="far fa-arrow-alt-circle-down"></i> Download CV</a>
+        </div>
+      </div>
+
+      <!-- Main -->
+      <div class="col-lg-9 px-4">
+
+        <!-- Hero -->
+        <div class="section" id="introduce">
+          <div class="section-label"><i class="fas fa-home"></i> INTRODUCE</div>
+          <h1>Say Hi from <span class="text-green">Shahbaz</span>,<br>Sr. UI/UX Designer</h1>
+          <p>I design experiences that are easy, clear, and enjoyable.</p>
+          <div class="d-flex gap-3 mt-4">
+            <div class="card-dark text-center p-3" style="background:#151515;border-radius:16px">
+              <h3 class="text-green mb-1" style="font-size:30px;font-weight:600;">3+</h3>
+              <p style="font-size:11px;letter-spacing:1px;color:#8a8a8a;text-transform:uppercase;margin:0;">Years of
+                Experience</p>
+            </div>
+            <div class="card-dark text-center p-3" style="background:#151515;border-radius:16px">
+              <h3 class="text-green mb-1" style="font-size:30px;font-weight:600;">5+</h3>
+              <p style="font-size:11px;letter-spacing:1px;color:#8a8a8a;text-transform:uppercase;margin:0;">Projects
+                Completed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="section" id="about">
+          <div class="section-label"><i class="fa fa-user me-1"></i> About</div>
+          <h2>Every great design begin with<br>an even <span class="text-green">better story</span></br></h2>
+          <p>Since beginning my journey as a freelance UI/UX designer nearly 3 years ago, I’ve worked <br>remotely with agencies, consulted for startups, and collaborated with talented teams to create <br>digital products for both businesses and consumers.
+          </br></p> 
+          <p>I focus on crafting intuitive, user-centered experiences with a calm and confident approach. My skill <br>set includes user research, wireframing, prototyping, and usability testing—helping me design <br>seamless, efficient, and impactful digital journeys.</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section" id="experience">
+          <div class="section-label"><i class="fa fa-briefcase me-1"></i> Experience</div>
+          <h2>My <span class="text-green">Experience</span></h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <p class="small">Apr 2024 - Present</p>
+              <h6>Senior UI/UX Designer</h6>
+              <p class="small">Livekeeping Technologies Pvt Ltd (An IndiaMart Company)</p>
+            </div>
+            <div class="timeline-item">
+              <p class="small">May 2023 - Mar 2024</p>
+              <h6>UI/UX Designer</h6>
+              <p class="small">Livekeeping Technologies Pvt Ltd (An IndiaMart Company)</p>
+            </div>
+            <div class="timeline-item">
+              <p class="small">Jan 2023 - Apr 2023</p>
+              <h6>UI/UX Designer Intern</h6>
+              <p class="small">Livekeeping Technologies Pvt Ltd (An IndiaMart Company)</p>
+            </div>
+            <div class="timeline-item">
+              <p class="small">May 2022 - Dec 2022</p>
+              <h6>Graphics Cum UI/UX Designer</h6>
+              <p class="small">Freelance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specializations -->
+        <div class="section" id="specialization">
+          <div class="section-label"><i class="fa fa-star me-1"></i> Specialization</div>
+          <h2>My <span class="text-green">Specializations</span></h2>
+          <div class="row g-3 mt-3">
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fa fa-globe" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Website Design</h6>
+                  <p class="mb-0 small">I design clean, user-friendly websites that boost online presence.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fa fa-mobile-screen" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Mobile App Design</h6>
+                  <p class="mb-0 small">I design intuitive, user-friendly mobile apps that deliver seamless experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fa fa-laptop-code" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Web App Design</h6>
+                  <p class="mb-0 small">I design scalable, user-friendly web apps that deliver seamless digital
+                    experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fa fa-sitemap" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Wireframing</h6>
+                  <p class="mb-0 small">I create clear, user-focused wireframes that shape effective digital
+                    experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fa fa-sitemap" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Prototyping</h6>
+                  <p class="mb-0 small">I build interactive prototypes to visualize and validate user experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card-dark p-3 d-flex align-items-center gap-3" style="background:#151515;border-radius:16px">
+                <i class="fas fa-bullhorn" style="font-size:18px;color:#00ff9d"></i>
+                <div>
+                  <h6 class="mb-1">Marketing Design</h6>
+                  <p class="mb-0 small">I design impactful marketing visuals that attract attention and drive engagement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advantages tools -->
+        <div class="section" id="tools">
+          <div class="section-label"><i class="fa fa-bolt me-1"></i> Tools</div>
+          <h2>My <span class="text-green">Advantages</span></h2>
+          <div class="row g-4 mt-4 text-center">
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                  width="40">
+                <h6 class="mt-3 text-green">90%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">Figma</p>
+            </div>
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid" src="./img/xd.svg"
+                  width="40">
+                <h6 class="mt-3 text-green">50%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">XD</p>
+            </div>
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid"
+                  src="./img/photoshop.svg" width="40">
+                <h6 class="mt-3 text-green">50%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">Photoshop</p>
+            </div>
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid"
+                  src="./img/illustrator.svg" width="40">
+                <h6 class="mt-3 text-green">50%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">Illustrator</p>
+            </div>
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid" src="./img/canva.svg"
+                  width="40">
+                <h6 class="mt-3 text-green">80%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">Canva</p>
+            </div>
+
+            <div class="col-md-4 col-6">
+              <div class="adv-card">
+                <img class="img-fluid"
+                  src="./img/framer.svg"
+                  width="40">
+                <h6 class="mt-3 text-green">60%</h6>
+              </div>
+              <p class="small mt-2 text-muted-custom">Framer</p>
+            </div>
+
+          </div>
+        </div>
+
+        <style>
+          /* .adv-card{
+  border:1px solid #1f1f1f;
+  border-radius:50%;
+  height:150px;
+  width:150px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:#111;
+} */
+          /* ===== PREMIUM TOOLS SECTION ===== */
+
+          .adv-card {
+            border: 1px solid #2a2a2a;
+            border-radius: 50%;
+            height: 160px;
+            width: 160px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            /* Improved background with more light */
+            background: radial-gradient(circle at 30% 30%, #1f1f1f, #0d0d0d 80%);
+
+            /* subtle inner highlight */
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.04);
+
+            transition: all 0.35s ease;
+          }
+
+          /* Glow layer */
+          .adv-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 157, 0.15), transparent 70%);
+            opacity: 0;
+            transition: 0.4s;
+          }
+
+          /* Hover effects */
+          .adv-card:hover {
+            transform: translateY(-6px) scale(1.05);
+            border-color: #00ff9d55;
+          }
+          .contacts:hover{
+            color: #00ff9d;
+          }
+
+          .adv-card:hover::before {
+            opacity: 1;
+          }
+
+          /* Icon */
+          .adv-card img {
+            width: 44px;
+            height: 44px;
+            transition: 0.3s;
+          }
+
+          .social:hover{
+          color: #00ff9d;
+          }
+
+          .adv-card:hover img {
+            transform: scale(1.1);
+          }
+
+          /* Percentage text */
+          .adv-card h6 {
+            font-weight: 600;
+            letter-spacing: 1px;
+          }
+
+          /* Tool name (outside circle) */
+          #tools p {
+            color: #9a9a9a;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+          }
+          .zoom{
+            transition: all 0.35s ease;
+          }
+          .zoom:hover{
+            transform: scale(1.08);
+          }
+        </style>
+
+
+        <!-- Projects -->
+        <div class="section" id="works">
+          <div class="section-label">
+            <i class="fa fa-layer-group me-1"></i> Works
+          </div>
+        
+          <h2>Featured <span class="text-green">Projects</span></h2>
+        
+          <!-- Tabs -->
+          <ul class="nav nav-pills mb-4" id="projectTabs">
+            <li class="nav-item">
+              <button class="nav-link active" data-filter="all">All</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-filter="web">Website/Web App</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-filter="mobile">Mobile App</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-filter="marketing">Marketing Designs</button>
+            </li>
+          </ul>
+        
+          <!-- Projects -->
+          <div class="row g-3" id="projectContainer">
+        
+            <!-- Digistay (Web) -->
+            <div class="col-md-6 project-item zoom" data-category="web">
+              <a href="https://digistay.ai/channel-manager" target="_blank">
+                <img class="img-fluid" src="./img--project/digistay.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="web">
+              <a href="https://www.linkedin.com/posts/md-shahbaz-alam-28885a259_uidesign-uxdesign-dashboarddesign-activity-7353405858883489792-gcBu" target="_blank">
+                <img class="img-fluid" src="./img--project/seo.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="web">
+              <a href="https://www.behance.net/gallery/192096375/Web-App-Revamp-Voucher-Creation-%28UIUX-Design%29" target="_blank">
+                <img class="img-fluid" src="./img--project/create sales.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="web">
+              <a href="https://www.livekeeping.com/partner-with-us" target="_blank">
+                <img class="img-fluid" src="./img--project/partner.svg">
+              </a>
+            </div>
+        
+            <!-- Mobile -->
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.figma.com/design/TP0FcB93dL304tJbHeVZOp/PuraniBazaar?node-id=0-1&t=QbzbvVoBvTuXWkLK-1" target="_blank">
+                <img class="img-fluid" src="./img--project/purani_bazaar.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.figma.com/design/PsJN1YwwXdnoNl370XXb8a/LivekeepingApp?node-id=1-51&t=ZMGSrw6mTlZP9wrb-1" target="_blank">
+                <img class="img-fluid" src="./img--project/partnerApp.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.figma.com/design/rmVXQOfoOEZW4NvKqQHtJo/Itax-Mobile-App?node-id=0-1&t=LQeRc3sT2Q2S2v2g-1" target="_blank">
+                <img class="img-fluid" src="./img--project/itax.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.behance.net/gallery/192333481/Team-Mobile-App" target="_blank">
+                <img class="img-fluid" src="./img--project/team.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.behance.net/gallery/166774729/Girl-Stop-A-Cosmetic-Product-Mobile-App" target="_blank">
+                <img class="img-fluid" src="./img--project/girlstop.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.figma.com/design/w49BMUW5zjuShKaIvTYmfc/Mold-The-Future?node-id=1-688&t=PzopxVGnO2p7ZbtE-1" target="_blank">
+                <img class="img-fluid" src="./img--project/mold.svg">
+              </a>
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="mobile">
+              <a href="https://www.linkedin.com/posts/md-shahbaz-alam-28885a259_uiux-mobileappdesign-redesign-activity-7363130965231087620-nW5u?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-qCggBRSc0B8_jkYJ9k3cN8qzwvjfNOcM" target="_blank">
+                <img class="img-fluid" src="./img--project/university.svg">
+              </a>
+            </div>
+        
+            <!-- Marketing -->
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/janmastmi.svg">
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/eway.svg">
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/15aug.svg">
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/email-template.svg">
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/logo.svg">
+            </div>
+
+            <div class="col-md-6 project-item zoom" data-category="marketing">
+                <img class="img-fluid" src="./img--project/cricket.svg">
+            </div>
+        
+        
+        
+          </div>
+        </div>
+       
+
+        
+        <!-- Contact -->
+        <div class="section mt-4" id="contact">
+          <div class="section-label"><i class="fa fa-envelope me-1"></i> Contact</div>
+          <h2>Let's work <span class="text-green">Together</span></h2>
+          <div
+            style="background:#151515;border-radius:16px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div>
+              <p style="font-size:11px;color:#8a8a8a;margin:0;">Email</p>
+              <a href="mailto:alam.shahbaz0703@gmail.com" target="_blank" class="text-decoration-none" style="color: #fff;"><span style="font-size:14px;" class="contacts">alam.shahbaz0703@gmail.com</span></a>
+            </div>
+            <i class="fa fa-envelope" style="color:#8a8a8a"></i>
+          </div>
+          <div
+            style="background:#151515;border-radius:16px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <p style="font-size:11px;color:#8a8a8a;margin:0;">Phone Number</p>
+              <a href="tel:+91-903729091" target="_blank" class="text-decoration-none" style="color: #fff;"><span style="font-size:14px;" class="contacts">+91-903729091</span></a>
+            </div>
+            <i class="fa fa-phone" style="color:#8a8a8a"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Icons -->
+    <!-- <div class="right-icons section-label">
+<i class="fas fa-home mt-3" href="#introduce"></i>
+<i class="fa fa-user my-3"></i>
+<i class="fa fa-briefcase mb-3"></i>
+<i class="fa fa-envelope mb-3"></i>
+</div> -->
+
+    <div class="right-icons section-label">
+      <a href="#introduce"><i class="fas fa-home mt-3"></i></a>
+      <a href="#about"><i class="fa fa-user my-3"></i></a>
+      <a href="#experience"><i class="fa fa-briefcase mb-3"></i></a>
+      <a href="#specialization"><i class="fa fa-star mb-3"></i></a>
+      <a href="#tools"><i class="fa fa-bolt mb-3"></i></a>
+      <a href="#works"><i class="fa fa-layer-group mb-3"></i></a>
+      <a href="#contact"><i class="fa fa-envelope mb-3"></i></a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const sections = document.querySelectorAll(".section");
+      const navIcons = document.querySelectorAll(".right-icons a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navIcons.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+    <script>
+      const tabs = document.querySelectorAll("#projectTabs .nav-link");
+      const projects = document.querySelectorAll(".project-item");
+      
+      tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+      
+          tabs.forEach(t => t.classList.remove("active"));
+          tab.classList.add("active");
+      
+          const filter = tab.getAttribute("data-filter");
+      
+          projects.forEach(project => {
+            const categories = project.getAttribute("data-category").split(" ");
+      
+            if (filter === "all" || categories.includes(filter)) {
+              project.style.display = "block";
+            } else {
+              project.style.display = "none";
+            }
+          });
+      
+        });
+      });
+      </script>
+</body>
+
+</html>
